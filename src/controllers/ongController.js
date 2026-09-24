@@ -52,3 +52,26 @@ export async function buscarOngPorId(req, res) {
 
   return res.status(200).json(ong);
 }
+// 4. Atualizar os dados de uma ONG
+export async function atualizarOng(req, res) {
+  const { id } = req.params;
+  const { nome, email, telefone, cidade, estado } = req.body;
+
+  const ongs = await lerDados('ongs');
+  const ong = ongs.find((item) => item.id === id);
+
+  if (!ong) {
+    return res.status(404).json({ mensagem: 'ONG não encontrada para atualização.' });
+  }
+
+  // Atualiza apenas os campos enviados no corpo da requisição
+  if (nome) ong.nome = nome;
+  if (email) ong.email = email;
+  if (telefone) ong.telefone = telefone;
+  if (cidade) ong.cidade = cidade;
+  if (estado) ong.estado = estado;
+
+  await salvarDados('ongs', ongs);
+
+  return res.status(200).json(ong);
+}

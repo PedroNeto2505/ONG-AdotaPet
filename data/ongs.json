@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": "cd774603-be34-4841-a7ef-a6db41dddc18",
+    "nome": "ONG para gatos",
+    "email": "onggatosquix@gmail.com",
+    "telefone": "00123456789",
+    "cidade": "Quixada",
+    "estado": "CE"
+  },
+  {
+    "id": "a9a7b03b-83f9-4bd0-8a0b-64a4c53f72af",
+    "nome": "ONG cachorros",
+    "email": "ongdogjua@icloud.com",
+    "telefone": "88999999991",
+    "cidade": "Juazeiro do Norte",
+    "estado": "CE"
+  }
+]
