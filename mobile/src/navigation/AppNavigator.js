@@ -1,4 +1,3 @@
-// mobile/src/navigation/AppNavigator.js
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -11,7 +10,7 @@ export default function AppNavigator() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'AdotaPet' }} />
-        {/* Os outros membros vão registrar suas telas aqui */}
+        {/* Adicione outras telas aqui, se necessário */}
       </Stack.Navigator>
     </NavigationContainer>
   );
