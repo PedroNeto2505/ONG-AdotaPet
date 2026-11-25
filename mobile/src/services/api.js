@@ -1,9 +1,5 @@
 import axios from 'axios';
 
-// IMPORTANTE:
-// - Emulador Android: use http://10.0.2.2:3000
-// - Celular físico (Expo Go na mesma rede Wi-Fi): use o IPv4 do seu PC (ex: http://192.168.1.15:3000)
-//   (descubra com 'ipconfig' no Windows ou 'ifconfig'/'ip a' no Linux/Mac)
 const API_BASE_URL = 'http://192.168.0.2:3000';
 
 export const api = axios.create({
@@ -28,7 +24,6 @@ export const petService = {
   },
 
   criar: async (novoPet) => {
-    // Campos esperados: { nome, especie, porte, idade, ongId }
     const { data } = await api.post('/pets', novoPet);
     return data;
   },
@@ -56,7 +51,6 @@ export const ongService = {
   },
 
   criar: async (novaOng) => {
-    // Campos esperados: { nome, email, telefone, cidade, estado }
     const { data } = await api.post('/ongs', novaOng);
     return data;
   },
